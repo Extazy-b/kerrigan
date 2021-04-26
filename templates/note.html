@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/note.css">
+    <title>{{f'{date1}.{date2}'}}</title>
+</head>
+<body>
+    <div class="grid-title">
+        <div class="title">
+            <div class="photo">{<img class="img" src="{{img}}">}</div>
+            <div class="name">{{nick}}</div>
+            <div class="date">{{date1}}<br>{{date2}}</div>
+        </div>
+        <div class="text">{{text}}</div>
+        <div class="media">
+            {% for photo in {{photos}} %}
+            <img src="{{photo}}">
+            {% endfor %}
+            {% for video in {{videos}} %}
+            <a href="{{video}}">Видеозапись</a>
+            {% endfor %}
+        </div>
+        <div class="audio">
+            {% for audio in {{audios}} %}
+            <audio src="{{audio}}"></audio>
+            {% endfor %}
+        </div>  
+    </div>
+</body>
+</html>

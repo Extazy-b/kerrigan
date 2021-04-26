@@ -1,0 +1,93 @@
+html, body {
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(202, 202, 202); */
+    padding: 0;
+    margin: 0;
+  }
+
+body{
+    background-image: url("background.jpg");
+    background-attachment: fixed;
+    height: 100%;
+    /* background-color: rgb(121, 121, 121); */
+}
+
+/* div{
+    border: 1px solid red ;
+} */
+
+.title{
+    background-color: rgba(94, 94, 94, 0.555);
+    display: grid;
+    grid-area: title;   
+    grid-template-areas: 
+    'photo name name date';
+}
+
+.photo img{
+    grid-area: photo;
+    object-fit: cover;
+    max-height: 140px;
+    border:1px solid oldlace;
+    border-radius: 50%;
+}
+
+.name{
+    grid-area: name;
+    max-height: calc(64/140*100%);
+    text-align: center;
+    align-self: center;
+    font-size: calc(4500 / 652 * 1vh);
+    /* background-color: blanchedalmond; */
+}
+
+.date{
+    grid-area: date;
+    text-align: center;
+    align-self: center;
+    font-size: calc(2000 / 652 * 1vh);
+    /* background-color: blanchedalmond; */
+}
+
+.text{
+    background-color: rgba(131, 130, 130, 0.555);
+    grid-area: text;
+    font-size: calc(2005 / 652 * 1vh);
+    /* background-color: blanchedalmond; */
+}
+
+.media{
+    display: grid;
+    background-color: rgba(94, 94, 94, 0.555);
+    grid-area: media;
+    grid-template-columns: repeat(6, minmax(auto, calc(170/339*100%)));
+    /* background-color: blanchedalmond; */
+}
+
+.audio{
+    display: grid;
+    background-color: rgba(94, 94, 94, 0.555);
+    grid-area: audio;
+    grid-template-columns: auto;
+    /* background-color: blanchedalmond; */
+}
+
+.grid-title{
+    height: 100vh;
+    position: absolute;
+    left: calc(353/1360*100%);
+    right: calc(352/1360*100%);
+    top: 0px;
+    bottom: 0px;
+    display: grid;
+    grid-template-areas: 
+    'title'
+    'text'
+    'media'
+    'audio'
+    ;
+    grid-row-gap: calc(37/475*100%);
+    grid-template-rows: minmax(auto, 140px), repeat(3, auto);
+}
